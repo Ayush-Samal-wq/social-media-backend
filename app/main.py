@@ -79,7 +79,7 @@ app.add_middleware(
 #the code below is called as a path operation or route.. consists of two major things a function and decorator'@'
 @app.get("/")  #get is the http method ... and("/") is the root path basically path after domain name of api... 
 async def root():  
-    return {"message": "Welcome ppl  this is  my APi !! "} #data sent back to the user which fast api convert it into json and shows it 
+    return {"message": "Welcome ppl  this is  my APi changed so auto reflect using docker bind mounts  !! "} #data sent back to the user which fast api convert it into json and shows it 
 # decorater is used to make the function act like api...
 
 #every time we make a change restart your serverby ctrl+c and  running uvicorn main:app in terminal to reflect changes in our web page.. 

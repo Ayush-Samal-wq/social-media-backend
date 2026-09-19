@@ -7,7 +7,7 @@ from pydantic import conint
 #pydantic schema model / basemodel on how our post should llok like  # its gonna valiudate if the input by user is in right format .. 
 class PostBase(BaseModel):
     title: str
-    Content: str # data type of the contnet .. /fieldtype..
+    content: str # data type of the contnet .. /fieldtype..
     published : bool = True #what we did here was we created a published req where if user dosent mention published then its default is true if he sets as false then itsnt gonna get published...
     # rating : Optional[int] = None # this is optional function from typing library ie if ratings is mentioned and is a int then it will show else it just defaults to none it not a compulsory field ..  removing it when we go into data base section since we dint need it in our database..
 
@@ -32,7 +32,7 @@ class post(PostBase): # to acess our repsonse model besides our path operationg 
     #title : str # id ot need to mention title contetn adn published since it extends / inherits from postbase class nayway just for my readability //
     #Content : str
     #published : bool
-    Created_at : datetime
+    created_at : datetime
     owner_id : int
 
     owner : UserCreateresp
